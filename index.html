@@ -8,14 +8,14 @@
   <body>
     <a-scene mindar-image="imageTargetSrc: ./targets.mind;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
       <a-assets>
-        <video id="youtube" src="./Frühling.mp4"></video>
+        <video id="video-mp4" autoplay="true" loop="true" src="./Frühling.mp4"></video>
         <a-asset-item id="3dobject" src="https://sketchfab.com/models/2a72200995344602a4daab15e8872766/embed"></a-asset-item>
       </a-assets>
 
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
 
       <a-entity mindar-image-target="targetIndex: 0">
-        <a-video rotation="0 0 0 " position="0 -0.25 0" scale="0.05 0.05 0.05" src="#youtube">
+        <a-video src="#video-mp4" webkit-playsinline playsinline width="1" height="0.552" position="0 0 0"></a-video>
       </a-entity>
       <a-entity mindar-image-target="targetIndex: 1">
         <a-gltf-model rotation="0 0 0 " position="0 -0.25 0" scale="0.05 0.05 0.05" src="#3dobject" animation-mixer>
